@@ -54,6 +54,8 @@ public class SelectPicsActivity extends BaseActivity {
     public static final String WIDTH = "WIDTH";
     public static final String HEIGHT = "HEIGHT";
     public static final String COMPRESS_SIZE = "COMPRESS_SIZE";
+    public static final String VIDEO_MAX_SECOND = "VIDEO_MAX_SECOND";
+    public static final String RECORD_VIDEO_SECOND = "RECORD_VIDEO_SECOND";
 
     public static final String SELECT_COUNT = "SELECT_COUNT";//可选择的数量
 
@@ -69,6 +71,8 @@ public class SelectPicsActivity extends BaseActivity {
     private Number width;
     private Number height;
     private String mimeType;
+    private int videoMaxSecond;
+    private int recordVideoSecond;
 
     @Override
     public void onCreate(@androidx.annotation.Nullable Bundle savedInstanceState) {
@@ -84,6 +88,9 @@ public class SelectPicsActivity extends BaseActivity {
         height = getIntent().getIntExtra(HEIGHT, 1);
         compressSize = getIntent().getIntExtra(COMPRESS_SIZE, 500);
         mimeType = getIntent().getStringExtra(CAMERA_MIME_TYPE);
+
+        videoMaxSecond = getIntent().getIntExtra(VIDEO_MAX_SECOND, 0);
+        recordVideoSecond = getIntent().getIntExtra(RECORD_VIDEO_SECOND, 0);
 
         Intent intent = new Intent(this, PermissionActivity.class);
         intent.putExtra(PermissionActivity.PERMISSIONS, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -209,6 +216,8 @@ public class SelectPicsActivity extends BaseActivity {
                             .isSingleDirectReturn(true)// 单选模式下是否直接返回
                             .previewImage(true)// 是否可预览图片 true or false
                             .enableCrop(enableCrop)// 是否裁剪 true or false
+                            .videoMaxSecond(videoMaxSecond)
+                            .recordVideoSecond(recordVideoSecond)
 
                             .circleDimmedLayer(false)
                             .showCropFrame(true)

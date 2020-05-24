@@ -106,6 +106,8 @@ class ImagePickers {
     bool showCamera: false,
     CropConfig cropConfig,
     int compressSize: 500,
+    int videoMaxSecond: 0,
+    int recordVideoSecond: 0
   }) async {
     String gMode = "image";
     if (galleryMode == GalleryMode.image) {
@@ -136,6 +138,8 @@ class ImagePickers {
       'width': width,
       'height': height,
       'compressSize': compressSize < 50 ? 50 : compressSize,
+      'videoMaxSecond': videoMaxSecond,
+      'recordVideoSecond': recordVideoSecond,
     };
     final List<dynamic> paths =
         await _channel.invokeMethod('getPickerPaths', params);

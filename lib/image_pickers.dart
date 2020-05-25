@@ -187,7 +187,7 @@ class ImagePickers {
   static previewImagesByMedia(List<Media> imageMedias,int initIndex) {
     if(imageMedias != null && imageMedias.length > 0){
       List<String> paths = imageMedias.map((Media media) => media.path).toList();
-      previewImages(paths,initIndex);
+      previewImages(paths, [], initIndex);
     }
   }
 

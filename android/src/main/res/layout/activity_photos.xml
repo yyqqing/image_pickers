@@ -11,16 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <TextView
-        android:id="@+id/view_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="45dp"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:text="" />
-
     <LinearLayout
         android:id="@+id/layout_tip"
         android:layout_alignParentBottom="true"
@@ -29,5 +19,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="" />
 
 </RelativeLayout>

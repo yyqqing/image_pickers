@@ -3,6 +3,7 @@ package com.leeson.image_pickers.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -13,6 +14,7 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.bumptech.glide.request.target.ImageViewTarget;
 import com.leeson.image_pickers.R;
 import com.luck.picture.lib.engine.ImageEngine;
+import com.luck.picture.lib.listener.OnImageCompleteCallback;
 import com.luck.picture.lib.tools.MediaUtils;
 import com.luck.picture.lib.widget.longimage.ImageSource;
 import com.luck.picture.lib.widget.longimage.ImageViewState;

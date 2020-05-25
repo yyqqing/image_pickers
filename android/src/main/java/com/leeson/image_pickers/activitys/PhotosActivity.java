@@ -49,6 +49,7 @@ public class PhotosActivity extends BaseActivity {
     private static final int READ_SDCARD = 101;
 
     public static final String IMAGES = "IMAGES";
+    public static final String TITLES = "TITLES";
     public static final String CURRENT_POSITION = "CURRENT_POSITION";
     ViewPager viewPager;
     LinearLayout layout_tip;

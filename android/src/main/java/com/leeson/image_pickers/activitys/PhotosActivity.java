@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
@@ -51,8 +52,10 @@ public class PhotosActivity extends BaseActivity {
     public static final String CURRENT_POSITION = "CURRENT_POSITION";
     ViewPager viewPager;
     LinearLayout layout_tip;
+    TextView viewTitle;
 
     private List<String> images;
+    private List<String> titles;
     private Number currentPosition;
 
 
@@ -168,8 +171,10 @@ public class PhotosActivity extends BaseActivity {
         setContentView(R.layout.activity_photos);
         viewPager = findViewById(R.id.viewPager);
         layout_tip = findViewById(R.id.layout_tip);
+        viewTitle = findViewById(R.id.view_title);
         inflater = LayoutInflater.from(this);
         images = getIntent().getStringArrayListExtra(IMAGES);
+        titles = getIntent().getStringArrayListExtra(TITLES);
         currentPosition = getIntent().getIntExtra(CURRENT_POSITION, 0);
 
         if (images != null && images.size() > 0) {
@@ -233,5 +238,11 @@ public class PhotosActivity extends BaseActivity {
             view.setBackground(ContextCompat.getDrawable(this, R.drawable.circle_gray));
         }
         layout_tip.getChildAt(pos).setBackground(ContextCompat.getDrawable(this, R.drawable.circle_white));
+
+        if (pos < titles.size()) {
+            viewTitle.setText(titles.get(pos));
+        } else {
+            viewTitle.setText("");
+        }
     }
 }

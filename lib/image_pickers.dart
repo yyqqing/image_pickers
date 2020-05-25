@@ -169,9 +169,10 @@ class ImagePickers {
   ///
   ///imagePaths 图片本地路径集合或者网络url集合 Image local path collection or network url collection
 
-  static previewImages(List<String> imagePaths,int initIndex) {
+  static previewImages(List<String> imagePaths, List<String> titles, int initIndex) {
     final Map<String, dynamic> params = <String, dynamic>{
       'paths': imagePaths,
+      'titles': titles,
       'initIndex': initIndex,
     };
     _channel.invokeMethod('previewImages', params);

@@ -5,6 +5,12 @@
     android:background="@color/bar_grey"
     android:orientation="vertical">
 
+    <com.leeson.image_pickers.views.ViewPagerFixed
+        android:id="@+id/viewPager"
+        android:background="@color/bar_grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <TextView
         android:id="@+id/view_title"
         android:layout_width="match_parent"
@@ -14,12 +20,6 @@
         android:gravity="center"
         android:textAlignment="center"
         android:text="" />
-
-    <com.leeson.image_pickers.views.ViewPagerFixed
-        android:id="@+id/viewPager"
-        android:background="@color/bar_grey"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:id="@+id/layout_tip"

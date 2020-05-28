@@ -144,6 +144,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       String cameraMimeType = methodCall.argument("cameraMimeType");
       Number videoMaxSecond = methodCall.argument("videoMaxSecond");
       Number recordVideoSecond = methodCall.argument("recordVideoSecond");
+      Number videoQuality = methodCall.argument("videoQuality");
 
       Intent intent = new Intent(registrar.context(), SelectPicsActivity.class);
       intent.putExtra(SelectPicsActivity.GALLERY_MODE,galleryMode);
@@ -156,6 +157,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       intent.putExtra(SelectPicsActivity.COMPRESS_SIZE,compressSize);
       intent.putExtra(SelectPicsActivity.VIDEO_MAX_SECOND,videoMaxSecond);
       intent.putExtra(SelectPicsActivity.RECORD_VIDEO_SECOND,recordVideoSecond);
+      intent.putExtra(SelectPicsActivity.VIDEO_QUALITY,videoQuality);
       //直接调用拍照或拍视频时有效
       intent.putExtra(SelectPicsActivity.CAMERA_MIME_TYPE,cameraMimeType);
       (registrar.activity()).startActivityForResult(intent, SELECT);

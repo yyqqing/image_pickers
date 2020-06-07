@@ -10,4 +10,5 @@
     <color name="disableColor">#cecece</color>
     <color name="transparent">#00000000</color>
     <color name="alpha_black">#44000000</color>
+    <color name="golfgreen">#0e5c54</color>
 </resources>

@@ -99,7 +99,7 @@ public class PictureStyleUtil {
             parameterStyle.pictureTitleDownResId = R.drawable.black_arrow_down;
 
             // 相册返回箭头
-            parameterStyle.pictureLeftBackIcon = R.drawable.black_back;
+            parameterStyle.pictureLeftBackIcon = R.drawable.back;
             // 标题栏字体颜色
             parameterStyle.pictureTitleTextColor = ContextCompat.getColor(context, R.color.bar_grey);
             // 相册右侧取消按钮字体颜色

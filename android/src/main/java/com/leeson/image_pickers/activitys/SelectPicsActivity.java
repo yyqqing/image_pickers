@@ -209,7 +209,7 @@ public class SelectPicsActivity extends BaseActivity {
                             .setPictureStyle(pictureStyleUtil.getStyle(uiColor))
                             .setPictureCropStyle(pictureStyleUtil.getCropStyle(uiColor))
 
-                            .imageFormat(PictureMimeType.PNG.toLowerCase())// 拍照保存图片格式后缀,默认jpeg
+//                            .imageFormat(PictureMimeType.JPEG.toLowerCase())// 拍照保存图片格式后缀,默认jpeg
                             .isCamera(showCamera)
                             .isGif(true)
                             .maxSelectNum(selectCount.intValue())

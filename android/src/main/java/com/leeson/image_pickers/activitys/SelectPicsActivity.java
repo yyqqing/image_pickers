@@ -202,17 +202,17 @@ public class SelectPicsActivity extends BaseActivity {
                     }
                     pictureSelectionModel
                             .loadImageEngine(GlideEngine.createGlideEngine())
-                            .isOpenStyleNumComplete(true)
-                            .isOpenStyleCheckNumMode(true)
+                            .isWeChatStyle(true)
+                            .theme(R.style.picture_WeChat_style)
 
                             .setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-                            .setPictureStyle(pictureStyleUtil.getStyle(uiColor))
-                            .setPictureCropStyle(pictureStyleUtil.getCropStyle(uiColor))
 
 //                            .imageFormat(PictureMimeType.JPEG.toLowerCase())// 拍照保存图片格式后缀,默认jpeg
                             .isCamera(showCamera)
                             .isGif(true)
+                            .minSelectNum(1)
                             .maxSelectNum(selectCount.intValue())
+                            .minVideoSelectNum(1)
                             .withAspectRatio(width.intValue(), height.intValue())
                             .imageSpanCount(4)// 每行显示个数 int
                             .selectionMode(selectCount.intValue() == 1 ? PictureConfig.SINGLE : PictureConfig.MULTIPLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
@@ -222,6 +222,7 @@ public class SelectPicsActivity extends BaseActivity {
                             .videoMaxSecond(videoMaxSecond)
                             .recordVideoSecond(recordVideoSecond)
                             .videoQuality(videoQuality)
+                            .isReturnEmpty(false)
 
                             .circleDimmedLayer(false)
                             .showCropFrame(true)
